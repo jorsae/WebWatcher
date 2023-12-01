@@ -5,3 +5,6 @@ def replace_string(original_text, find_text, replace_text):
         raise TypeException(f'{type(text)=} {type(replace_text)=}')
     
     return original_text.replace(find_text, replace_text)
+
+def create_substring(original_text, front=None, back=None):
+    return original_text[front:back]
