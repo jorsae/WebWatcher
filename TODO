@@ -1,0 +1,45 @@
+=== Database structure ===
+Tasks:
+    - TaskId
+    - TaskName
+    - Interval ("1M3d5h5m2s")
+    - DateAdded
+    - RunningStatus (on/off)
+    - InstructionId
+
+Instructions:
+    - InstructionId
+    - CommandType
+    - Command (json)
+    - StepId
+    - TaskId
+
+Results:
+    - ResultId
+    - DateExecuted
+    - Result
+    - TaskId
+
+InstructionHistory:
+    - InstructionHistoryId
+    - DateExecuted
+    - ExecutionResult (sucess/failure)
+    - InstructionId
+
+CommandTypes:
+    - PageRequest (going to a website)
+        - Url
+        - Request Method
+        - Headers
+        - Cookies
+    - Regular Expression
+        - match
+        - search
+    - String Replace
+        - find text
+        - replace text
+    - Substring
+        - start digit : last digit
+    - Type Conversion
+        - starting type
+        - ending type
